@@ -1,5 +1,6 @@
 import React from 'react'
 import './AddMenu.css';
+import { ResponsiveComponent } from "react-responsive-component";
 import "./vam.jpg"
 import 'react-confirm-alert/src/react-confirm-alert.css' 
 import 'bootstrap/dist/css/bootstrap.css';
