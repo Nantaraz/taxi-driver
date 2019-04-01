@@ -1,0 +1,16 @@
+.aaa {
+    margin-top: 50px;
+}
+#aaaa,#bbbb {
+    width: 250px;
+    height: 60px;
+}
+#cccc{
+    border: 1px ridge olive;
+    width: 200px;
+    height: 100px;
+    margin-top: 10px;
+}
+.mian {
+    margin-top: 10px;
+}
