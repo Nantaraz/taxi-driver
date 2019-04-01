@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import "./Menu.css";
-import { ResponsiveComponent } from "react-responsive-component";
+//import { ResponsiveComponent } from "react-responsive-component";
 // import Responsive from 'react-responsive';
  
-const Desktop = props => <ResponsiveComponent {...props} minWidth={992} />;
-const Tablet = props => <ResponsiveComponent {...props} minWidth={768} maxWidth={991} />;
-const Mobile = props => <ResponsiveComponent {...props} maxWidth={767} />;
-const Default = props => <ResponsiveComponent {...props} minWidth={768} />;
+// const Desktop = props => <ResponsiveComponent {...props} minWidth={992} />;
+// const Tablet = props => <ResponsiveComponent {...props} minWidth={768} maxWidth={991} />;
+// const Mobile = props => <ResponsiveComponent {...props} maxWidth={767} />;
+// const Default = props => <ResponsiveComponent {...props} minWidth={768} />;
 
 const Menu = props => {
 	const initialFormState = { depart: '', arrive: ''}
@@ -31,7 +31,7 @@ const Menu = props => {
 						<td>
 							{/* <select  type="text" name="depart"   onChange={handleInputChange} /> */}
 							<select id='aaaa' className='l' aria-label="Où êtes-vous?">
-                                <option value="0">Où êtes-vous?</option>
+                                <option >Où êtes-vous?</option>
                                 <option value="1">Ankatso</option>
                                 <option value="2">Ambanidia</option>
                                 <option value="3">Antsahabe</option>
@@ -72,8 +72,8 @@ const Menu = props => {
 							{/* <input id='l' type="text" name="arrive" value={user.arrive} placeholder="Où allez-vous?" onChange={handleInputChange} /> */}
 							
 							<select id='bbbb' className='l' aria-label="Où allez-vous?" >
-                                <option value="0">Où allez-vous?</option>
-                                <option value="1">Ankatso</option>
+                                <option value="1">Où allez-vous?</option>
+                                <option >Ankatso</option>
                                 <option value="2">Ambanidia</option>
                                 <option value="3">Antsahabe</option>
                                 <option value="4">Ankadifotsy</option>
@@ -118,26 +118,27 @@ const Menu = props => {
                 document.getElementById('cccc').innerHTML="";
 				var x1 = document.getElementById("aaaa").value;
                 var y1 = document.getElementById("bbbb").value;
-                var tab = ['taxi1','taxi2','taxi3','taxi4','taxi5','taxi6','taxi7']
+                var tab = ['taxi Ankatso-Anosizato </br> n°: 1342TAF </br> tél: 039 17 135 20','taxi Analamahitsy-Ampasapito </br> n°: 8735GAT </br> tél: 033 90 128 61']
             for(var i=1;i<=x1.length;i++) {
-                for(var j=i+1;j<=y1.length+1;j++) {
-				if (x1[i] == y1[j] ) {
-							console.log(document.getElementById('cccc').innerHTML=tab[i%6])
-				} else if(x1[i+1] == y1[j]) {
-                    document.getElementById('cccc').innerHTML="taxi n° 4534 TRJ <br/> Frais:5000 Ar <br/> tél: 034 65 789 33 ";
+                for(var j=1;j<=y1.length;j++) {
+                    if(x1[1]==y1[j]){
+                            console.log(document.getElementById('cccc').innerHTML =tab[0])
+                } else if(x1[2]==y1[j]) {
+                    console.log(document.getElementById('cccc').innerHTML =tab[1])
                 }
-            }
-            }
+
+                else if(x1[3]==y1[j]) {
+                    console.log(document.getElementById('cccc').innerHTML =tab[2])
+                }
+            
+            
+            }}
 
 			}}
 			>Taxi list</button>
 			<div id='cccc'></div>
 		</center>	
-	</div>
-
-		
-		
-			
+	</div>	
 	</form>
 
 		
